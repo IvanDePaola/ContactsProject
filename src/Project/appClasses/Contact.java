@@ -1,5 +1,7 @@
 package Project.appClasses;
 
+import java.util.ArrayList;
+
 public class Contact implements Comparable<Contact> {
 	
 	//define attributes
@@ -9,11 +11,11 @@ public class Contact implements Comparable<Contact> {
 	private int phoneNumber;
 	private String eMail;
 	
-	public Contact(String firstName, String lastName, int phoneNumber, String eMail) {
+	public Contact(String firstName, String lastName, int i, String string) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.phoneNumber = phoneNumber;
-		this.eMail = eMail;
+		this.phoneNumber = i;
+		this.eMail = string;
 	}
 	public String getfirstName() {
 		return this.firstName;
@@ -31,20 +33,20 @@ public class Contact implements Comparable<Contact> {
 		this.lastName = lastName;
 	}
 
-	public String geteMail() {
+	public ArrayList<String> geteMail() {
 		return this.eMail;
 	}
 
-	public void seteMail(String eMail) {
-		this.eMail = eMail;
+	public void seteMail(String eMail) {//maybe need to add index input to get back the values
+		this.eMail.add(eMail);
 	}
 
-	public int getPhoneNumber() {
+	public ArrayList<Integer> getPhoneNumber() {
 		return this.phoneNumber;
 	}
 
 	public void setPhoneNumber(int phoneNumber) {
-		this.phoneNumber = phoneNumber;
+		this.phoneNumber.add(phoneNumber);
 	}
 	
 
